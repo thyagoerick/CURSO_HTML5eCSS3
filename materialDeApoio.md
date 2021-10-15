@@ -142,7 +142,7 @@ target, assim o link será aberto em outra aba. E em algum outro lugar do texto 
 ele, desta forma: <a href="mailto:lucas@vilaboim.com" target="_blank">lucas@vilaboim.com</a>
 ~~~~
 
-### bImagens
+### Imagens
 
 ~~~~HTML
 A web também é feita de imagens e para representá-las temos o elemento <img>, ele é um daqueles elementos sem tag 
@@ -174,8 +174,9 @@ Editor de texto mostrando códigos HTML.
 ~~~~
 
 ### Listas
-
+~~~~HTML
 Os últimos elementos que veremos neste módulo são os relacionados a listas: <ul>, <ol> e <li>.
+~~~~
 
 Listas servem para agrupar uma coleção de itens, como uma lista de ingredientes ou, como será no nosso caso, uma lista
 com contatos.
