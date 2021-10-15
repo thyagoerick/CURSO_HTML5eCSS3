@@ -137,3 +137,7 @@ Serve para interligar vários conteúdos na web.
 > na mesma janela; _parent: abre a página na mesma janela do link; 
 > _top: cancela todos os demais frames e abre a nova página no mesmo 
 > navegador.
+
+### Exercício:
+>Adicionar um texto a nossa postagem" e alguns links dentro desse texto.
+---
