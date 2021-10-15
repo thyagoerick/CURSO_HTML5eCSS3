@@ -54,8 +54,7 @@ Depois de conhecer o elemento HTML, podemos conhecer também a estrutura.
   </body>  
 </html> 
 ~~~
+---
 
-
-
-
-
+## Exercício:
+>Criaremos a estrutura básica para o nosso site.
