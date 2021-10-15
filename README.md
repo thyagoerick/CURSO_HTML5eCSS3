@@ -140,4 +140,26 @@ Serve para interligar vários conteúdos na web.
 
 ### Exercício:
 >Adicionar um texto a nossa "postagem" e alguns links dentro desse texto.
----
+
+### Imagens
+
+São elementos de tag sem fechamento.
+
+~~~~HTML
+<img>
+
+<img src="img/avatar.jpg">
+
+<img alt="Foto de Thyago Erick">
+~~~~
+
+Possui apenas 2 atibutos:
+
+**_src_:**
+>**Source**(Fonte): É obrigatório, podendo ser a localização da imagem em um diretório próprio ou em outro lugar.
+
+**_alt_:**
+>**Alt Text**(texto alternativo): Não é obrigatório, mas é recomendado para melhorar a acessibilidade. Ele mostra a descrição da foto quando ela não é carregada e leitores de tela usam essa descrição para mostrar aos usuários o que a imagem significa.
+
+### Exercício:
+>Adicionar uma imagem ao cabeçalho da página e uma imagem à "postagem".
