@@ -139,5 +139,5 @@ Serve para interligar vários conteúdos na web.
 > navegador.
 
 ### Exercício:
->Adicionar um texto a nossa postagem" e alguns links dentro desse texto.
+>Adicionar um texto a nossa "postagem" e alguns links dentro desse texto.
 ---
