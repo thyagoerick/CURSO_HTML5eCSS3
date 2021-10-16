@@ -212,3 +212,118 @@ Elementos de dentro da lista:
 
 >Adicionar uma lista de contatos ao rodapé
 ---
+
+## Introdução
+
+![CSS3](https://armyyazilim.com/wp-content/uploads/2019/10/css.png)
+
+**Objetivos:**
+
+1. O que são seletores;
+2. Conceitos básicos;
+3. Principais seletores CSS;
+
+**Requisitos**
+
+- [x] Editor de texto
+- [x] Browser
+- [x] Ter conhecimento em HTML5
+---
+
+Por causa da criação do HTML a necessidade de formatar páginas ficou 
+evidente, então **em 1996 foi criada a linguagem de estilos que conhecemos por _CSS_**
+
+Sua sintaxe é bem simples, básicamente criamos **regras de estilo** para
+elementos ou grupos de elementos.
+
+---
+
+## 1. O que são seletores
+
+![RegraCSS](https://pensandonaweb.com.br/content/images/2014/Aug/css-rule-structure.png)
+
+> De a cordo com a imagem acima é possível perceber que seletores são apenas elementos HTML.
+> Na imagem vemos uma regra para o seletor h1, porém poderia ter mais de um elemento que usaria da mesma regra.
+
+- Para isso poderíamos fazer da seguinte forma:
+
+~~~~CSS
+h1, a, p, h3{
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+}
+~~~~
+
+Os todos os elementos (HTML5)/ seletores (CSS3): **a**, **p**, **h3** e 
+**h1** fazem uso da mesma regra CSS separados/listados por **,**(vírgula).
+
+---
+
+### ID x Classe
+
+Anteriormente, vimos uma como uma regra CSS pode alterar vários
+elementos HTML diretamente.
+Mas isso significa que qualquer elemento que seja de um daqueles tipos vai ter a mesma aparência.
+
+Para ficar mais claro, vamos lembrar do nosso site, lá temos vários "header's", mas algumas vezes não queremos que quando editarmos um "header" todos os outros fiquem com a mesma formatação. Aí que entra o uso dos ID's e Classes.
+
+> O seletor que vimos anteriormente é um seletor de **tipo/tag**
+> pois ele representa um elemento HTML.
+> Mas **_os ID's e Classes podem representar quaisquer tipos de elementos_**.
+
+- No **HTML** declaramos as classes e id's como no trecho abaixo:
+~~~~HTML
+<header id="header" class="header"></header>
+
+<header class="header"></header>
+~~~~
+
+- No **CSS** declaramos as classes e id's como no trecho abaixo:
+~~~~CSS
+/*Classe*/
+.header{
+  padding: 10px
+}
+
+/*ID*/
+#header{
+  padding: 15px
+}
+~~~~
+
+> Temos precedência de seletores: **Classe** > **ID** > **Tag**
+>> Isso significa que se um elemento tem seletores de tag e de classe, por exemplo, as regras que irão aparecer primeiro serão as da classe e depois a da tag, se um elemento tem regra de classe e regra de tag em que há mesma propriedade está sendo modificada de formas diferentes a que prevalecerá será a com maior significado que no caso é a modificação da classe.
+
+- _Exemplo_: a regra de tag coloca a cor como vermelha e a regra de classe coloca como amarela; a cor amarela será a que ficará.
+---
+
+## 2. Conceitos básicos
+
+Quando estamos fazendo o leiaute de um site, o navegador
+representa cada elemento HTML com uma caixa retangular, e chamamos isso de **_box model_** e com CSS conseguimos alterar a aparência dessa caixa.
+
+### Box model
+
+O _box model_ tem 4 áreas: (da mais externa a mais interna)
+
+1. margem;
+2. borda;
+3. padding;
+4. conteúdo;
+
+
+Box Model |
+:--------: | 
+![Box Model](https://miro.medium.com/max/724/1*sKnLrT1TtqWDZg7GWoBCow.png) |
+
+- **Margin**: São os espaçamentos entre os elementos;
+- **Border**: Circundam o padding e o conteúdo;
+- **Padding**: É o espaçamento entre a borda e o conteúdo;
+- **Content**: Pde ser um texto, um vídeo ou uma imagem.
+
+### Exercício
+
+>Para enxergarmos o box-model vamos adicionar cores e bordas e alguns elementos.
+---
+
