@@ -1,6 +1,8 @@
 body{
     background-color: #f3ebfa;
     font-family: Verdana, Tahoma, sans-serif;
+    max-width: 900px;/*Dessa forma nosso conteúdo vai ter até 900px, mas se a nossa tela for menor que isso ele vai se adequar.*/
+    margin: auto;
 }
 
 .foto{
@@ -44,11 +46,13 @@ a{
     margin: 0;
     margin-bottom: 15px; 
     text-transform: capitalize;
+    text-align: justify;
 }
 
 .post_image{
     margin: 0;
     margin-bottom: 15px; 
+    width: 100%; /*respeita a delimitação do elemento que ela está contida*/
 }
 
 .contacts_list{
