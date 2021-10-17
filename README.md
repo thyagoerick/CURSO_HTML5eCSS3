@@ -242,7 +242,7 @@ elementos ou grupos de elementos.
 
 ![RegraCSS](https://pensandonaweb.com.br/content/images/2014/Aug/css-rule-structure.png)
 
-> De a cordo com a imagem acima é possível perceber que seletores são apenas elementos HTML.
+> De a cordo com a imagem a cima é possível perceber que seletores são apenas elementos HTML.
 > Na imagem vemos uma regra para o seletor h1, porém poderia ter mais de um elemento que usaria da mesma regra.
 
 - Para isso poderíamos fazer da seguinte forma:
@@ -272,14 +272,14 @@ Para ficar mais claro, vamos lembrar do nosso site, lá temos vários "header's"
 > pois ele representa um elemento HTML.
 > Mas **_os ID's e Classes podem representar quaisquer tipos de elementos_**.
 
-- No **HTML** declaramos as classes e id's como no trecho abaixo:
+- No **HTML** declaramos as classes e id's como no trecho a baixo:
 ~~~~HTML
 <header id="header" class="header"></header>
 
 <header class="header"></header>
 ~~~~
 
-- No **CSS** declaramos as classes e id's como no trecho abaixo:
+- No **CSS** declaramos as classes e id's como no trecho a baixo:
 ~~~~CSS
 /*Classe*/
 .header{
@@ -327,3 +327,260 @@ Box Model |
 >Para enxergarmos o box-model vamos adicionar cores e bordas e alguns elementos.
 ---
 
+## Estilizando elementos 
+
+### Padding e Margin
+
+Podemos atrbuir tamanhos diferentes para cada lado do padding e da margin, e temos algumas formas de fazer isso;
+
+
+~~~~CSS
+.post{
+  padding: 10px 5px; 
+  /*
+  10px = parte superior e inferior (eixo y)
+  5px  = lado esquerdo e direito (eixo x)
+  */
+}         
+
+.post{
+  padding: 15px 10px 5px 0; 
+  /*
+    Temos um valor para cada lado:
+    15px = topo;
+    10px = direita;
+    5px  = parte inferior;
+    0 =  esquerda (quando temos o valor 0 não precisamos usar unidade)
+  */
+}  
+
+.post{
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 0; 
+  /*
+    Usando valores específicos para cada variação da propriedade.
+    Isso é mais usado quando temos um padding ou uma margin que tem 3 lados iguais e só um diferente
+  */
+} 
+~~~~
+
+### Background 
+
+~~~~CSS
+.post{
+  background-color: green;
+  background-image: url("caminho/imagem.estencao");
+  background-position: top;
+  /*
+    background-color e  background podem alterar a cor de fundo do elemento;
+  */
+}
+~~~~
+
+### Border
+
+~~~~CSS
+.post{
+  border: 3px     solid   blue;
+  /*      largura estilo  cor*/ 
+  /*
+    solid = aparência sólida
+    dotted = pontilhada
+    dashed = trecejada
+  */ 
+ 
+}
+
+.post{
+  border-top: 15px dotted green;
+  border-right: 10px dashed pink;
+  border-bottom: 5px solid purple;
+  border-left: 2px dotted cyan;
+}
+
+
+.post{
+  border: 3px solid grey;
+}
+/*Caso não queira só a propriedade border para setar todos os valores, podemo decalarar as propriedades separadamente*/
+.post{
+  border-width: 3px;
+  border-color: grey;
+  border-style: solid;
+}
+
+/*
+E ainda podemos ser mais específicos ainda colocando o lado que queremos mudar antes da propriedade separadamente
+*/
+.post{
+  border-top-width: 3px;
+  border-top-color: blue;
+  border-top-style: solid;
+  /*aqui estamos moditicando apenas o topo da borda*/
+}
+~~~~
+
+### Border-radius
+Ele permite arredondar os cantos de um elemento.
+- border-radius: 10px; (_altera todos os cantos de um elemento_)
+- border-radius: 50%; (_deixa um elemento quadrado redondo_)
+- border-radius: 10% 20%;    
+-     border-radius: 10%   20%      15%        22%;
+                     topo  direita  inferior   esquerda
+
+---
+
+## Estilizando textos 
+Podemos usar as fonts da Web ou as instaladas da nossa máquina.
+
+### font-family
+
+> Web safe fonts, são chamadas assim pois se encontram na maioria dos dispositivos;
+
+~~~CSS
+#title{
+  font-family: Verdana;
+}
+
+.post_title{
+  font-family: Verdana, Arial;
+  /*Caso a primeira fonte não funcione a segunda entra como backup*/
+}
+~~~
+
+### font-size
+Altera o tamanho do nosso texto, existem algumas unidades de tamanho, porém, aqui só vamos usar o *pixel*.
+~~~CSS
+#title{
+  font-size: 30px;
+}
+
+.post_title{
+  font-size: 10px;
+}
+~~~
+
+### font-style
+Altera a aparência do nosso texto
+~~~CSS
+#title{
+  font-style: normal;
+  /*O valor "normal" é  padrão, então ele vai mostrar a fonte do jeito que ela foi desenhada*/
+}
+
+.subtitle{
+  font-style: italic; /*muda a fonte para um pouco mais inclinada*/
+~~~
+
+### font-weight
+Alterao peso do nosso texto
+~~~CSS
+#title{
+  font-weight: normal;
+  /*O valor "normal" é  padrão, então ele vai mostrar a fonte do jeito que ela foi desenhada*/
+}
+
+.subtitle{
+  font-weight: bold; 
+  /*deixa a fonte em negrito*/
+}
+~~~
+
+### text-transform
+
+Ele alterna o texto em maiúsculas e minúsculas
+~~~CSS
+#title{
+ text-transform: uppercase;/*caixa alta*/
+}
+
+.subtitle{
+  text-transform: lowercase;/*caixa baixa*/
+}
+  
+.post_title{
+  text-transform: capitalize;/*todas as iniciais das palavras maúsculas*/
+}
+~~~
+
+### text-decoration
+
+É muito usado para dar destaque em algum texto, pois ele coloca linhas.
+~~~CSS
+#title{
+ text-decoration: underline;
+ /*coloca uma linha a baixo da palavra*/
+}
+
+.subtitle{
+  text-decoration: overline;
+  /*coloca uma linha a cima da palavra*/
+}
+  
+.post_title{
+  text-decoration: line-through;
+  /*coloca uma linha no centro da palavra, cortando-a no meio*/
+}
+~~~
+---
+
+## Estilizando listas
+Existem listas ordenadas e listas não ordenadas.
+Para alterar os marcadores dessas listas usamos o **list-style-type**.
+
+### list-style-type
+~~~CSS
+ul{
+ list-style-type: square;
+ /*muda o marcador padão para um quadrado*/
+}
+
+ol{
+  list-style-type: upper-roman;
+  /*Lista ordenada para algarismo romano em maiúsculo*/
+}
+  
+ul{
+  list-style-type: "\1f44D";
+ /*muda o marcador padão para um simbolo (emoji de um joinha)*/
+}
+~~~
+
+### list-style-image
+Podemos adicionar imagens como marcadores
+~~~CSS
+ul{
+ list-style-image: url("imagem.extensão");
+ /*muda o marcador padão para um quadrado*/
+}
+~~~
+---
+## Cascata
+
+O CSS funciona como uma cascata, então é possível compor uma hierarquia de classes relacionadas, com o objetivo de criar formatações para áreas especificas, e permitir a hierarquia correta de propriedades.
+
+- Exemplo:
+~~~HTML
+<ul class="contacts_list">
+  <li>
+      <a class="email" href="mailto:thyago123gois@gmail.com">thyago123gois@gmail.com</a>
+  </li>
+  <li>
+      <a href="https://www.linkedin.com/in/thyagoerick" target="_blank">LinkedIn</a> 
+  </li>
+</ul>
+~~~
+
+>No exemplo a cima temos que a tag **ul** que é uma *tag composta* pois depende da tag **li** para existir, possui dois *li's* e dentro de cada um temos um conteúdo, no primeiro li temos uma tag **a**  com a classe _"email"_ e dentro do segundo temos apenas uma âncora (sem classe).
+
+>A cascata funciona quando usamos esse cascateamento dos elementos para uma edição mais específica, logo se quisermos fazer alguma alteração apenas no link com a com a classe *"email"*, podemos fazer como mostrado a baixo:
+
+~~~CSS
+.contacts_list li .email{
+  color: blue;
+}
+
+/*Aqui só editamos o elemento que possui a classe "email" que fica dentro de algum li, e que esse li fica dentro de algum elemento que tem a classe "contacts_list"*/
+~~~
