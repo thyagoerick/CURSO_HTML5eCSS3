@@ -584,3 +584,21 @@ O CSS funciona como uma cascata, então é possível compor uma hierarquia de cl
 
 /*Aqui só editamos o elemento que possui a classe "email" que fica dentro de algum li, e que esse li fica dentro de algum elemento que tem a classe "contacts_list"*/
 ~~~
+---
+
+## Propriedades de dimensões e alinhamento
+>Valores declarados em px ou %
+- **Width**: Largura;
+- **Height**: Altura.
+
+- **Max-width**: largura máxima que determinado elemento pode ter;
+- **Max-height**: altura máxima que determinado elemento pode ter.
+
+- **Margin**: Serve para colocar espeçamentos entre elementos;
+> A propriedade **margin** tem o valor **auto**, que serve para alinhar algum elemento altomaticamente.
+
+- **Taxt aling**: Serve para alinhar textos;
+  - right: alinha à direita;
+  - left: alinha à esquerda;
+  - center: alinha ao centro;
+  - justfy: alinha justificado.
